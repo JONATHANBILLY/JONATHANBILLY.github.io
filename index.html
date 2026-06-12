@@ -39,7 +39,18 @@
   /* ---------- header ---------- */
   header{padding:18px 0;border-bottom:1px solid var(--line)}
   header .wrap{display:flex;justify-content:space-between;align-items:center}
-  .brand{font-family:"Schibsted Grotesk",sans-serif;font-weight:700;font-size:15px;letter-spacing:.02em;color:var(--ink)}
+  .brand{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:14.5px;letter-spacing:.01em;color:var(--ink)}
+  .cursor{color:var(--accent);animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion: reduce){
+    .cursor{animation:none}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
   nav{display:flex;gap:22px}
   nav a{color:var(--ink-soft);font-size:14px;font-weight:500}
   nav a:hover{color:var(--ink);text-decoration:none}
@@ -142,6 +153,14 @@
   .about p{max-width:620px;color:var(--ink-soft)}
   .about p + p{margin-top:14px}
   .about strong{color:var(--ink);font-weight:600}
+  .timeline{margin-top:36px}
+  .tl-item{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+  .tl-date{font-size:12.5px;color:var(--accent);padding-top:3px;letter-spacing:.02em}
+  .tl-body h3{font-family:"Inter",sans-serif;font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:4px}
+  .tl-body p{font-size:14.5px;color:var(--ink-soft);max-width:560px}
+  @media (max-width:560px){
+    .tl-item{grid-template-columns:1fr;gap:4px}
+  }
 
   /* ---------- contact / footer ---------- */
   .contact .row{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
@@ -156,7 +175,7 @@
 
 <header>
   <div class="wrap">
-    <span class="brand">JB&nbsp;Mintarja</span>
+    <span class="brand mono">jonathan.billy<span class="cursor" aria-hidden="true">_</span></span>
     <nav>
       <a href="#project">Project</a>
       <a href="#skills">Skills</a>
@@ -210,10 +229,10 @@
       </div>
 
       <div class="kpis" aria-label="Key metrics from the analysis">
-        <div class="kpi"><div class="num">R$8.55M</div><div class="lbl">Revenue, Jan–Aug 2018</div></div>
-        <div class="kpi"><div class="num"><span>+142.8%</span></div><div class="lbl">Revenue growth YoY</div></div>
-        <div class="kpi"><div class="num">53K</div><div class="lbl">Delivered orders</div></div>
-        <div class="kpi"><div class="num">R$162</div><div class="lbl">Average order value</div></div>
+        <div class="kpi"><div class="num" data-count="8.55" data-prefix="R$" data-suffix="M" data-decimals="2">R$8.55M</div><div class="lbl">Revenue, Jan–Aug 2018</div></div>
+        <div class="kpi"><div class="num"><span data-count="142.8" data-prefix="+" data-suffix="%" data-decimals="1">+142.8%</span></div><div class="lbl">Revenue growth YoY</div></div>
+        <div class="kpi"><div class="num" data-count="53" data-suffix="K" data-decimals="0">53K</div><div class="lbl">Delivered orders</div></div>
+        <div class="kpi"><div class="num" data-count="162" data-prefix="R$" data-decimals="0">R$162</div><div class="lbl">Average order value</div></div>
       </div>
 
       <h2 style="font-size:20px;margin-top:8px">Key findings</h2>
@@ -282,14 +301,35 @@
       <p class="section-label">About</p>
       <h2>From code to insight</h2>
       <p>
-        I'm an <strong>Informatics graduate of Universitas Kristen Duta Wacana</strong> currently in the
-        Officer Development Program at <strong>PT Bank Multiarta Sentosa Tbk (Bank MAS)</strong>.
+        I started as a developer, moved into banking, and found that what I enjoy most sits in
+        between: taking raw data apart and turning it into decisions. My developer background means
+        I'm comfortable going deep technically — SQL, data modeling, DAX — while banking keeps me
+        focused on what the numbers mean for the business.
       </p>
-      <p>
-        My developer background means I'm comfortable going deep on the technical side — data modeling,
-        DAX, SQL — while my banking experience keeps me focused on what the numbers mean for the business.
-        I'm building toward business analyst and data analytics roles where both sides matter.
-      </p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date mono">Jul 2025 — Now</div>
+          <div class="tl-body">
+            <h3>Marketing Officer Development Program · PT Bank Multiarta Sentosa Tbk (Bank MAS)</h3>
+            <p>Analyzing prospective debtors' financial profiles and risk indicators; building banking fundamentals in credit and financial analysis.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date mono">Jan 2024 — Mar 2025</div>
+          <div class="tl-body">
+            <h3>Fullstack &amp; Backend Developer · Konnco Studio</h3>
+            <p>Payment gateway integration, transaction investigation and debugging with SQL, and SIT/UAT for fintech products.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date mono">Education</div>
+          <div class="tl-body">
+            <h3>B.Sc. Informatics · Universitas Kristen Duta Wacana</h3>
+            <p>Certifications: Power BI Intensive + Acceleration Program (Analytic), RevoU Data Analytics, Introduction to Programming Using Python.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -314,9 +354,53 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Jonathan Billy Mintarja</span>
-    <span>Built by hand · Hosted on GitHub Pages</span>
+    <span class="mono">jonathanbilly.github.io</span>
   </div>
 </footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* scroll reveal */
+  var targets = document.querySelectorAll('section .wrap, .hero, .finding, .shot, .kpis');
+  targets.forEach(function(el){ el.classList.add('reveal'); });
+  if(reduce || !('IntersectionObserver' in window)){
+    targets.forEach(function(el){ el.classList.add('in'); });
+  }else{
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:.12});
+    targets.forEach(function(el){ io.observe(el); });
+  }
+
+  /* KPI count-up */
+  var nums = document.querySelectorAll('[data-count]');
+  function animate(el){
+    var end = parseFloat(el.dataset.count),
+        dec = parseInt(el.dataset.decimals||'0',10),
+        pre = el.dataset.prefix||'', suf = el.dataset.suffix||'',
+        dur = 1200, t0 = null;
+    function frame(t){
+      if(!t0) t0 = t;
+      var p = Math.min((t-t0)/dur,1);
+      p = 1-Math.pow(1-p,3); /* ease-out */
+      el.textContent = pre + (end*p).toFixed(dec) + suf;
+      if(p<1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  if(reduce || !('IntersectionObserver' in window)) return;
+  var io2 = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ animate(e.target); io2.unobserve(e.target); }
+    });
+  },{threshold:.6});
+  nums.forEach(function(el){ io2.observe(el); });
+})();
+</script>
 
 </body>
 </html>
