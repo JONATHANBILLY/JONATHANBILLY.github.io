@@ -183,6 +183,19 @@
   .hero p{font-size:16px}
   .hero-links{margin-top:24px}
 }
+  .more-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  @media (max-width:560px){ .more-grid{grid-template-columns:1fr} }
+  .more-card{
+    border:1px solid var(--line);border-radius:8px;padding:22px;background:var(--bg-tint);
+    display:flex;flex-direction:column;
+  }
+  .more-card .tool{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:10px;
+  }
+  .more-card h3{font-family:"Schibsted Grotesk",sans-serif;font-size:18px;margin-bottom:8px;color:var(--ink)}
+  .more-card p{font-size:14px;color:var(--ink-soft);margin-bottom:18px;flex:1}
+  .more-card .btn{align-self:flex-start;padding:8px 16px;font-size:13.5px}
 </style>
 </head>
 <body>
@@ -192,6 +205,7 @@
     <span class="brand mono">jonathan.billy<span class="cursor" aria-hidden="true">_</span></span>
     <nav>
       <a href="#project">Project</a>
+      <a href="#more">More</a>
       <a href="#skills">Skills</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -273,7 +287,26 @@
       </div>
     </div>
   </section>
-
+<!-- ============ MORE WORK ============ -->
+  <section id="more">
+    <div class="wrap">
+      <p class="section-label">More work</p>
+      <div class="more-grid">
+        <div class="more-card">
+          <span class="tool">Tableau</span>
+          <h3>Global Music Streaming</h3>
+          <p>Interactive Tableau dashboard exploring global music streaming patterns — including the most-listened artists across age groups.</p>
+          <a class="btn" href="https://public.tableau.com/app/profile/jonathan.billy.mintarja/viz/GlobalMusicStreaming/MostListenedArtistbyAgeGroup" target="_blank" rel="noopener">View on Tableau</a>
+        </div>
+        <div class="more-card">
+          <span class="tool">Kaggle · Python</span>
+          <h3>Music Volume Analysis 2010–2020</h3>
+          <p>Exploratory analysis notebook examining music streaming volume trends across the 2010–2020 decade.</p>
+          <a class="btn" href="https://www.kaggle.com/code/jonathanbilly/highest-volume-from-2010-2020" target="_blank" rel="noopener">View on Kaggle</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ============ SKILLS ============ -->
   <section id="skills">
     <div class="wrap">
