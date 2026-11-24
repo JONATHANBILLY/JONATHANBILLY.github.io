@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Featured Case Study — Olist E-Commerce Analysis | Jonathan Billy Mintarja</title>
+<meta name="description" content="End-to-end Power BI, DAX, and Star Schema case study analyzing ~100K Olist e-commerce orders, YoY revenue growth, and customer retention.">
+<meta name="author" content="Jonathan Billy Mintarja">
+<meta name="theme-color" content="#fafaf8">
+<link rel="canonical" href="https://jonathanbilly.github.io/case-study.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317191e'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' font-weight='bold' text-anchor='middle' fill='%23b45309'%3EJB%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Featured Case Study — Olist E-Commerce Analysis | Jonathan Billy Mintarja">
+<meta property="og:description" content="End-to-end Power BI, DAX, and Star Schema case study analyzing ~100K Olist e-commerce orders, YoY revenue growth, and customer retention.">
+<meta property="og:url" content="https://jonathanbilly.github.io/case-study.html">
+<meta property="og:image" content="https://jonathanbilly.github.io/images/olist-revenue-trend.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="brand-full">jonathan.billy</span><span class="brand-short">jb</span><span class="cursor" aria-hidden="true">_</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="case-study.html" class="active" aria-current="page">Case Study</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section id="featured" aria-labelledby="project-title">
+    <div class="wrap">
+      <p class="section-label">Featured Case Study</p>
+      <div class="proj-head">
+        <h2 id="project-title">Olist E-Commerce Sales &amp; Retention Analysis</h2>
+        <span class="proj-meta">Power BI · DAX · Star Schema · 11 Tables</span>
+      </div>
+
+      <div class="case-grid">
+        <div class="case-box">
+          <h3>01 · Business Problem</h3>
+          <p>Analyze ~100K orders across 11 relational tables (Jan–Aug 2018 vs. Jan–Aug 2017) to uncover regional revenue concentration, payment behavior, and retention drivers.</p>
+        </div>
+        <div class="case-box">
+          <h3>02 · Modeling &amp; DAX</h3>
+          <p>Engineered a clean star schema semantic model with custom DAX measures for YoY growth, running totals, repeat customer rate, regional share, and delivery lead time.</p>
+        </div>
+        <div class="case-box">
+          <h3>03 · Strategic Outcome</h3>
+          <p>Identified high single-purchase churn (97%) and ~3× AOV uplift from multi-installment credit payments, translating raw metrics into actionable bundling &amp; regional promo levers.</p>
+        </div>
+      </div>
+
+      <div class="shots">
+        <figure class="shot wide">
+          <img src="images/olist-revenue-trend.png" width="1295" height="417" loading="lazy" decoding="async" alt="Power BI dashboard showing monthly revenue trend for the Olist e-commerce marketplace, January to August 2018" onerror="this.outerHTML='<div class=\'shot-fallback\'>[Dashboard Visual: Monthly Revenue Trend Jan–Aug 2018 — Place PNG in images/olist-revenue-trend.png]</div>'">
+          <figcaption class="shot-caption">Revenue trend, Jan–Aug 2018 — tracking YoY momentum and seasonal dips (click chart to zoom)</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/olist-state.png" width="692" height="367" loading="lazy" decoding="async" alt="Power BI chart of Olist total revenue by Brazilian customer state, led by São Paulo" onerror="this.outerHTML='<div class=\'shot-fallback\'>[Dashboard Visual: Revenue by State — images/olist-state.png]</div>'">
+          <figcaption class="shot-caption">Revenue distribution by state (São Paulo &amp; top 3 states)</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/olist-category.png" width="622" height="362" loading="lazy" decoding="async" alt="Power BI chart of Olist total revenue by product category" onerror="this.outerHTML='<div class=\'shot-fallback\'>[Dashboard Visual: Revenue by Category — images/olist-category.png]</div>'">
+          <figcaption class="shot-caption">Revenue breakdown across top product categories</figcaption>
+        </figure>
+      </div>
+
+      <div class="kpis" role="group" aria-label="Key metrics from the Olist analysis">
+        <div class="kpi"><div class="num" data-count="8.55" data-prefix="R$" data-suffix="M" data-decimals="2">R$8.55M</div><div class="lbl">Revenue, Jan–Aug 2018</div></div>
+        <div class="kpi"><div class="num"><span data-count="142.8" data-prefix="+" data-suffix="%" data-decimals="1">+142.8%</span></div><div class="lbl">Revenue growth YoY</div></div>
+        <div class="kpi"><div class="num" data-count="53" data-suffix="K" data-decimals="0">53K</div><div class="lbl">Delivered orders</div></div>
+        <div class="kpi"><div class="num" data-count="162" data-prefix="R$" data-decimals="0">R$162</div><div class="lbl">Average order value</div></div>
+      </div>
+
+      <h3 style="font-family:'Schibsted Grotesk',sans-serif;font-size:19px;margin-top:8px">Key Findings &amp; Business Recommendations</h3>
+
+      <div class="finding">
+        <div class="stat">40%</div>
+        <p><strong>Geographic concentration requires localized marketing.</strong> São Paulo holds 40% of total revenue and the top 3 states hold 64%. While Rio de Janeiro clusters in a single metro area (54%), Minas Gerais spreads across 600+ cities—calling for distinct logistics and acquisition playbooks.</p>
+      </div>
+
+      <div class="finding">
+        <div class="stat">~3×</div>
+        <p><strong>Credit card installments strongly drive Average Order Value.</strong> Orders paid in 6+ installments average R$317 compared to R$98 for single payments, making installment promotion a primary lever for higher-ticket categories.</p>
+      </div>
+
+      <div class="finding">
+        <div class="stat">97%</div>
+        <p><strong>High one-time buyer rate shifts focus to first-order monetization.</strong> Because repeat purchases are rare, revenue growth depends on maximizing initial basket size through product bundling (2+ item orders average R$250 vs. R$150) and free-shipping thresholds.</p>
+      </div>
+
+      <div class="proj-links">
+        <a class="btn primary" href="https://github.com/JONATHANBILLY/powerbi-olist" target="_blank" rel="noopener">View Repository on GitHub</a>
+        <a class="btn" href="https://github.com/JONATHANBILLY/powerbi-olist#readme" target="_blank" rel="noopener">Read Full Documentation</a>
+      </div>
+
+      <div class="page-pager">
+        <a href="index.html">← Home</a>
+        <a href="projects.html">Next: Projects →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Dashboard screenshot preview">
+  <div class="lightbox-inner">
+    <div class="lightbox-top">
+      <span id="lightbox-caption">Dashboard Preview</span>
+      <button type="button" class="lightbox-close" id="lightbox-close">Close [Esc]</button>
+    </div>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+</div>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Jonathan Billy Mintarja</span>
+    <span>Yogyakarta, Indonesia · jonathanbilly.github.io</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
